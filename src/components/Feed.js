@@ -1,7 +1,7 @@
 import styles from '../style.module.css';
 import Webcam from "react-webcam";
 import React, { useEffect } from 'react';
-function Feed ({detectEnabled, webcamRef, canvasRef, isQuiz, detect, neuralNetLeft, neuralNetRight, rightMode}){
+function Feed ({resetCanvas, detectEnabled, webcamRef, canvasRef, isQuiz, detect, neuralNetLeft, neuralNetRight, rightMode}){
     
     // Detect function for the Detect button
     const startDetection = () => {
@@ -15,6 +15,7 @@ function Feed ({detectEnabled, webcamRef, canvasRef, isQuiz, detect, neuralNetLe
     // Event listener for detection if Enter key is pressed
     const handleKeyPress = (event) => {
       if (event.key === 'Enter') {
+        resetCanvas();
         startDetection();
       }
     }

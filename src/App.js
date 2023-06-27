@@ -182,7 +182,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <Feed detectEnabled={detectEnabled} webcamRef={webcamRef} canvasRef={canvasRef} isQuiz={isQuiz} detect={detect} neuralNetLeft={neuralNetLeft} neuralNetRight={neuralNetRight} rightMode={rightMode}></Feed>
+      <Feed resetCanvas={() => resetCanvas()} detectEnabled={detectEnabled} webcamRef={webcamRef} canvasRef={canvasRef} isQuiz={isQuiz} detect={detect} neuralNetLeft={neuralNetLeft} neuralNetRight={neuralNetRight} rightMode={rightMode}></Feed>
       
       <Details
         rightMode={rightMode}
